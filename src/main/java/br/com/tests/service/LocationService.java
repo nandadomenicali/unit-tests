@@ -27,6 +27,15 @@ public class LocationService {
     }
 
     public static void main(String[] args) {
+        // testing without framework
+        LocationService locationService = new LocationService();
+        User user = new User("MockedUser");
+        Movie movie = new Movie("MockedMovie", 2, 5.0);
 
+        Location location = locationService.rentMovie(user, movie);
+
+        System.out.println(location.getPrice());
+        System.out.println(location.getMovie());
+        System.out.println(location.getReturnDate());
     }
 }
