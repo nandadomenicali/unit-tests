@@ -3,6 +3,7 @@ package br.com.tests.service;
 import br.com.tests.entity.Location;
 import br.com.tests.entity.Movie;
 import br.com.tests.entity.User;
+import br.com.tests.utils.DataUtils;
 
 import java.util.Date;
 
@@ -34,8 +35,9 @@ public class LocationService {
 
         Location location = locationService.rentMovie(user, movie);
 
-        System.out.println(location.getPrice());
-        System.out.println(location.getLocationDate());
-        System.out.println(location.getReturnDate());
+        System.out.println(location.getPrice() == 5.0);
+        System.out.println(DataUtils.isTheSameDate(location.getLocationDate(), new Date()));
+        System.out.println(DataUtils.isTheSameDate(location.getReturnDate(),
+                DataUtils.getDaysWithDiffDays(1)));
     }
 }
