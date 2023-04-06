@@ -35,7 +35,7 @@ public class LocationService {
         Location location = locationService.rentMovie(user, movie);
 
         System.out.println(location.getPrice());
-        System.out.println(location.getMovie());
+        System.out.println(location.getLocationDate());
         System.out.println(location.getReturnDate());
     }
 }
