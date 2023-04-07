@@ -22,7 +22,7 @@ public class LocationService {
         deliveryDate = addDays(deliveryDate, 1);
         location.setReturnDate(deliveryDate);
 
-        //TODO adicionar método para salvar
+        //TODO Add method to save location
 
         return location;
     }
