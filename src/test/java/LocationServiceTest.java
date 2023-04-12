@@ -18,7 +18,7 @@ public class LocationServiceTest {
 
         Location location = locationService.rentMovie(user, movie);
 
-        Assert.assertTrue(location.getPrice() == 5.0);
+        Assert.assertEquals(5.0, location.getPrice(), 0.01);
         Assert.assertTrue(DataUtils.isTheSameDate(location.getLocationDate(), new Date()));
         Assert.assertTrue(DataUtils.isTheSameDate(location.getReturnDate(),
                 DataUtils.getDaysWithDiffDays(1)));
