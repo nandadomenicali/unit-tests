@@ -3,8 +3,6 @@ package br.com.tests.service;
 import br.com.tests.entity.Location;
 import br.com.tests.entity.Movie;
 import br.com.tests.entity.User;
-import br.com.tests.utils.DataUtils;
-import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
