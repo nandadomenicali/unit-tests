@@ -3,7 +3,7 @@ import br.com.tests.entity.Movie;
 import br.com.tests.entity.User;
 import br.com.tests.service.LocationService;
 import br.com.tests.utils.DataUtils;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -18,9 +18,9 @@ public class LocationServiceTest {
 
         Location location = locationService.rentMovie(user, movie);
 
-        Assert.assertEquals(5.0, location.getPrice(), 0.01);
-        Assert.assertTrue(DataUtils.isTheSameDate(location.getLocationDate(), new Date()));
-        Assert.assertTrue(DataUtils.isTheSameDate(location.getReturnDate(),
+        Assertions.assertEquals(5.0, location.getPrice(), 0.01);
+        Assertions.assertTrue(DataUtils.isTheSameDate(location.getLocationDate(), new Date()));
+        Assertions.assertTrue(DataUtils.isTheSameDate(location.getReturnDate(),
                 DataUtils.getDaysWithDiffDays(1)));
     }
 }
